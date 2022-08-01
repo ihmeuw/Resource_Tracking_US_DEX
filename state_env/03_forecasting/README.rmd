@@ -1,0 +1,7 @@
+All code to run models of state-level health spending based off the SHEA and other sources. Final output is draw-level state spending for 2001-2019 by payer, toc, and aggregate.
+
+These scripts are ordered but they don't perfectly follow the required chain of operations. See the model submission script for the correct order.
+01_create_model_metadata shouldn't need to be rerun unless the universe of models being tested changes. Do not rerun with state model reruns.
+After running 02_agg_model_worker, you need to run the model_compile script to aggregate the models and choose the best performer. 
+Then you can run 03_payer_model_worker and 04_model_worker, and then again run model_compile for each.
+Payer tasks and toc tasks can be run at the same time.
