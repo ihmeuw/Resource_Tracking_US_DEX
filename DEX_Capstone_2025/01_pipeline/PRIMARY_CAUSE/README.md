@@ -1,0 +1,1 @@
+The PRIMARY_CAUSE adjustment determines, for each health care encounter, which diagnosis should be designated as the primary diagnosis, so that further analysis may be performed on primary diagnoses specifically. 

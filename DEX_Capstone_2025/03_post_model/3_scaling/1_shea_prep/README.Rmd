@@ -1,0 +1,16 @@
+
+## How to run SHEA envelope prep
+
+Dependencies: Updating the raw SHEA data has no dependencies, but for updates in splitting the SHEA envelope into DEX types of care, C2E and F2T must have been run.
+
+Purpose:
+Scale DEX estimates to payer and type of care specific total spending amounts as reported by the State and National Health Expenditure Accounts (S/NHEA). 
+
+Approach:
+1. 1_shea_data_prep.R: SHEA data is only available at the payer and toc level for All payers combined, Medicare, and Medicaid. SHEA is available for Private payer at the aggregate type of care level. NHEA data is available at the payer and toc level for all payers: All, MDCR, MDCD, PRIV, OOP, and OTH. Determine all SHEA payer and item spend amounts using NHEA to solve for missing amounts. 
+2. 2_launch_make_toc_split_scalars.R: Calculate the fractions of ambulatory, inpatient, and emergency department spending that were from facility spending and professional spending in DEX microdata sources.
+3. 3_shea_split.R: Pooling across states, fit a linear model with a state fixed effect to generate a smoothed time trend for each type of care. 
+4. 3_shea_split.R: Use previously published correction factors from Roehrig and colleagues to shift spending from some SHEA categories to others.
+5. 3_shea_split.R: Calculate new SHEA envelopes adjusted for DEX types of care
+
+

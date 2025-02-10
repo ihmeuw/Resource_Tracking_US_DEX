@@ -1,0 +1,1 @@
+This step saves out total counts of health care utilization for those with private insurance. These counts inform the imputation of a sample denominator for KYTHERA and HCUP data (see 00_data_prep/denom/hcup_kythera). 

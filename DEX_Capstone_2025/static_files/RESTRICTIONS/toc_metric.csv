@@ -1,0 +1,17 @@
+toc,metric
+AM,encounters_per_person
+AM,spend_per_encounter
+DV,encounters_per_person
+DV,spend_per_encounter
+ED,encounters_per_person
+ED,spend_per_encounter
+HH,encounters_per_person
+HH,spend_per_encounter
+IP,encounters_per_person
+IP,spend_per_encounter
+NF,encounters_per_person
+NF,spend_per_encounter
+RX,days_per_encounter
+RX,encounters_per_person
+RX,spend_per_day
+RX,spend_per_encounter

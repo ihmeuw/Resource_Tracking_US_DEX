@@ -1,0 +1,166 @@
+acause,cause_name,gbd_match,gbd_level_used,gbd_cause_name,gbd_cause_agg,family,family_name,acause_lvl2,cause_name_lvl2,acause_lvl1,cause_name_lvl1
+ckd,Chronic kidney disease,yes,3,Chronic kidney disease,"",fam_ckd,Kidney diseases,diab_ckd,Diabetes and kidney diseases,_ncd,Non-communicable diseases
+ckd_NEC,"Kidney diseases, not elsewhere classified","","","","",fam_ckd,Kidney diseases,diab_ckd,Diabetes and kidney diseases,_ncd,Non-communicable diseases
+glomerulo,Acute glomerulonephritis,yes,3,Acute glomerulonephritis,"",fam_ckd,Kidney diseases,diab_ckd,Diabetes and kidney diseases,_ncd,Non-communicable diseases
+renal_failure,Acute renal failure,no,"","","",fam_ckd,Kidney diseases,diab_ckd,Diabetes and kidney diseases,_ncd,Non-communicable diseases
+cong,Congenital birth defects,yes,3,Congenital birth defects,"",fam_cong,Congenital birth defects,_otherncd,Other non-communicable diseases,_ncd,Non-communicable diseases
+cvd_NEC,"Cardiovascular diseases, not elsewhere classified","","","","",fam_cvd,Cardiovascular diseases,cvd,Cardiovascular diseases,_ncd,Non-communicable diseases
+cvd_afib,Atrial fibrillation and flutter,yes,3,Atrial fibrillation and flutter,"",fam_cvd,Cardiovascular diseases,cvd,Cardiovascular diseases,_ncd,Non-communicable diseases
+cvd_aortic,Aortic aneurysm,yes,3,Aortic aneurysm,"",fam_cvd,Cardiovascular diseases,cvd,Cardiovascular diseases,_ncd,Non-communicable diseases
+cvd_cmp,Cardiomyopathy and myocarditis,yes,3,Cardiomyopathy and myocarditis,"",fam_cvd,Cardiovascular diseases,cvd,Cardiovascular diseases,_ncd,Non-communicable diseases
+cvd_endo,Endocarditis,yes,3,Endocarditis,"",fam_cvd,Cardiovascular diseases,cvd,Cardiovascular diseases,_ncd,Non-communicable diseases
+cvd_hf,Heart Failure,no,"","","",fam_cvd,Cardiovascular diseases,cvd,Cardiovascular diseases,_ncd,Non-communicable diseases
+cvd_htn,Hypertensive heart disease,yes,3,Hypertensive heart disease,"",fam_cvd,Cardiovascular diseases,cvd,Cardiovascular diseases,_ncd,Non-communicable diseases
+cvd_ihd,Ischemic heart disease,yes,3,Ischemic heart disease,"",fam_cvd,Cardiovascular diseases,cvd,Cardiovascular diseases,_ncd,Non-communicable diseases
+cvd_other,Other cardiovascular and circulatory diseases,yes,3,Other cardiovascular and circulatory diseases,"",fam_cvd,Cardiovascular diseases,cvd,Cardiovascular diseases,_ncd,Non-communicable diseases
+cvd_pah,Pulmonary Arterial Hypertension,yes,3,Pulmonary Arterial Hypertension,"",fam_cvd,Cardiovascular diseases,cvd,Cardiovascular diseases,_ncd,Non-communicable diseases
+cvd_pvd,Lower extremity peripheral arterial disease,yes,3,Lower extremity peripheral arterial disease,"",fam_cvd,Cardiovascular diseases,cvd,Cardiovascular diseases,_ncd,Non-communicable diseases
+cvd_rhd,Rheumatic heart disease,yes,3,Rheumatic heart disease,"",fam_cvd,Cardiovascular diseases,cvd,Cardiovascular diseases,_ncd,Non-communicable diseases
+cvd_stroke,Stroke,yes,3,Stroke,"",fam_cvd,Cardiovascular diseases,cvd,Cardiovascular diseases,_ncd,Non-communicable diseases
+cvd_valvu,Non-rheumatic valvular heart disease,yes,3,Non-rheumatic valvular heart disease,"",fam_cvd,Cardiovascular diseases,cvd,Cardiovascular diseases,_ncd,Non-communicable diseases
+diabetes_NEC,"Diabetes, not elsewhere classified","","","","",fam_diabetes,Diabetes,diab_ckd,Diabetes and kidney diseases,_ncd,Non-communicable diseases
+diabetes_typ1,Diabetes mellitus type 1,yes,4,Diabetes mellitus type 1,"",fam_diabetes,Diabetes,diab_ckd,Diabetes and kidney diseases,_ncd,Non-communicable diseases
+diabetes_typ2,Diabetes mellitus type 2,yes,4,Diabetes mellitus type 2,"",fam_diabetes,Diabetes,diab_ckd,Diabetes and kidney diseases,_ncd,Non-communicable diseases
+cirrhosis,Cirrhosis and other chronic liver diseases,yes,3,Cirrhosis and other chronic liver diseases,"",fam_digest,Digestive diseases,digest,Digestive diseases,_ncd,Non-communicable diseases
+digest_NEC,"Digestive diseases, not elsewhere classified","","","","",fam_digest,Digestive diseases,digest,Digestive diseases,_ncd,Non-communicable diseases
+digest_appendicitis,Appendicitis,yes,3,Appendicitis,"",fam_digest,Digestive diseases,digest,Digestive diseases,_ncd,Non-communicable diseases
+digest_bile,Gallbladder and biliary diseases,yes,3,Gallbladder and biliary diseases,"",fam_digest,Digestive diseases,digest,Digestive diseases,_ncd,Non-communicable diseases
+digest_hernia,"Inguinal, femoral, and abdominal hernia",yes,3,"Inguinal, femoral, and abdominal hernia","",fam_digest,Digestive diseases,digest,Digestive diseases,_ncd,Non-communicable diseases
+digest_ibd,Inflammatory bowel disease,yes,3,Inflammatory bowel disease,"",fam_digest,Digestive diseases,digest,Digestive diseases,_ncd,Non-communicable diseases
+digest_ileus,Paralytic ileus and intestinal obstruction,yes,3,Paralytic ileus and intestinal obstruction,"",fam_digest,Digestive diseases,digest,Digestive diseases,_ncd,Non-communicable diseases
+digest_other,Other digestive diseases,yes,3,Other digestive diseases,"",fam_digest,Digestive diseases,digest,Digestive diseases,_ncd,Non-communicable diseases
+digest_pancreatitis,Pancreatitis,yes,3,Pancreatitis,"",fam_digest,Digestive diseases,digest,Digestive diseases,_ncd,Non-communicable diseases
+digest_upper,Upper digestive system diseases,yes,3,Upper digestive system diseases,"",fam_digest,Digestive diseases,digest,Digestive diseases,_ncd,Non-communicable diseases
+digest_vascular,Vascular intestinal disorders,yes,3,Vascular intestinal disorders,"",fam_digest,Digestive diseases,digest,Digestive diseases,_ncd,Non-communicable diseases
+endo,"Endocrine, metabolic, blood, and immune disorders",yes,3,"Endocrine, metabolic, blood, and immune disorders","",fam_endo,"Endocrine, metabolic, blood, and immune disorders",_otherncd,Other non-communicable diseases,_ncd,Non-communicable diseases
+_enteric_all,Enteric infections,yes,2,Enteric infections,"",fam_enteric,Enteric infections,_enteric_all,Enteric infections,_comm,"Communicable, maternal, neonatal, and nutritional diseases"
+_gc,Garbage code,"","","","",fam_gc,Garbage code,_gc,Garbage code,_gc,Garbage code
+gyne,Gynecological diseases,yes,3,Gynecological diseases,"",fam_gyne,Gynecological diseases,_otherncd,Other non-communicable diseases,_ncd,Non-communicable diseases
+hemog,Hemoglobinopathies and hemolytic anemias,yes,3,Hemoglobinopathies and hemolytic anemias,"",fam_hemog,Hemoglobinopathies and hemolytic anemias,_otherncd,Other non-communicable diseases,_ncd,Non-communicable diseases
+_infect_agg,Other infectious diseases,yes (indirect),3 & 4,"","diptheria, encephalitis, measles, infectious, whooping, tetanus, varicella, hepatitis_a, hepatitis_b, hepatitis_e",fam_infect,Other infectious diseases,_infect,Other infectious diseases,_comm,"Communicable, maternal, neonatal, and nutritional diseases"
+hepatitis_c,Acute hepatitis C,yes,4,Acute hepatitis C,"",fam_infect,Other infectious diseases,_infect,Other infectious diseases,_comm,"Communicable, maternal, neonatal, and nutritional diseases"
+infect_NEC,"Other infectious diseases, not elsewhere classified","","","","",fam_infect,Other infectious diseases,_infect,Other infectious diseases,_comm,"Communicable, maternal, neonatal, and nutritional diseases"
+meningitis,Meningitis,yes,3,Meningitis,"",fam_infect,Other infectious diseases,_infect,Other infectious diseases,_comm,"Communicable, maternal, neonatal, and nutritional diseases"
+septicemia,Septicemia,no,"","","",fam_infect,Other infectious diseases,_infect,Other infectious diseases,_comm,"Communicable, maternal, neonatal, and nutritional diseases"
+_intent_agg,Interpersonal violence,yes (indirect),3,"","inj_war_warterror, inj_homicide, inj_war_execution",fam_inj,Injuries,_intent,Self-harm and interpersonal violence,_inj,Injuries
+_unintent_agg,Other unintentional injuries,yes (indirect),3,"","inj_animal, inj_drowning, inj_electrocution, inj_non_disaster, inj_disaster, inj_fires, inj_foreign, inj_othunintent, inj_poisoning",fam_inj,Injuries,_unintent,Unintentional injuries,_inj,Injuries
+inj_NEC,"Injuries, not elsewhere classified","","","","",fam_inj,Injuries,inj_NEC,"Injuries, not elsewhere classified",_inj,Injuries
+inj_falls,Falls,yes,3,Falls,"",fam_inj,Injuries,_unintent,Unintentional injuries,_inj,Injuries
+inj_mech,Exposure to mechanical forces,yes,3,Exposure to mechanical forces,"",fam_inj,Injuries,_unintent,Unintentional injuries,_inj,Injuries
+inj_suicide,Self-harm,yes,3,Self-harm,"",fam_inj,Injuries,_intent,Self-harm and interpersonal violence,_inj,Injuries
+inj_trans,Transport injuries,yes,2,Transport injuries,"",fam_inj,Injuries,inj_trans,Transport injuries,_inj,Injuries
+exp_well_pregnancy,Pregnancy and postpartum care,no,"","","",fam_maternal,Maternal disorders,_well,Well care,_well,Well care
+maternal_NEC,"Maternal disorders, not elsewhere classified","","","","",fam_maternal,Maternal disorders,mater_neonat,Maternal and neonatal disorders,_comm,"Communicable, maternal, neonatal, and nutritional diseases"
+maternal_abort_ectopic,Ectopic pregnancy,yes,4,Ectopic pregnancy,"",fam_maternal,Maternal disorders,mater_neonat,Maternal and neonatal disorders,_comm,"Communicable, maternal, neonatal, and nutritional diseases"
+maternal_abort_mis,Maternal abortion and miscarriage,yes,4,Maternal abortion and miscarriage,"",fam_maternal,Maternal disorders,mater_neonat,Maternal and neonatal disorders,_comm,"Communicable, maternal, neonatal, and nutritional diseases"
+maternal_hem,Maternal hemorrhage,yes,4,Maternal hemorrhage,"",fam_maternal,Maternal disorders,mater_neonat,Maternal and neonatal disorders,_comm,"Communicable, maternal, neonatal, and nutritional diseases"
+maternal_hiv,Maternal deaths aggravated by HIV/AIDS,yes,4,Maternal deaths aggravated by HIV/AIDS,"",fam_maternal,Maternal disorders,mater_neonat,Maternal and neonatal disorders,_comm,"Communicable, maternal, neonatal, and nutritional diseases"
+maternal_htn,Maternal hypertensive disorders,yes,4,Maternal hypertensive disorders,"",fam_maternal,Maternal disorders,mater_neonat,Maternal and neonatal disorders,_comm,"Communicable, maternal, neonatal, and nutritional diseases"
+maternal_indirect,Indirect maternal deaths,yes,4,Indirect maternal deaths,"",fam_maternal,Maternal disorders,mater_neonat,Maternal and neonatal disorders,_comm,"Communicable, maternal, neonatal, and nutritional diseases"
+maternal_late,Late maternal deaths,yes,4,Late maternal deaths,"",fam_maternal,Maternal disorders,mater_neonat,Maternal and neonatal disorders,_comm,"Communicable, maternal, neonatal, and nutritional diseases"
+maternal_obstruct,Maternal obstructed labor and uterine rupture,yes,4,Maternal obstructed labor and uterine rupture,"",fam_maternal,Maternal disorders,mater_neonat,Maternal and neonatal disorders,_comm,"Communicable, maternal, neonatal, and nutritional diseases"
+maternal_other,Other direct maternal disorders,yes,4,Other direct maternal disorders,"",fam_maternal,Maternal disorders,mater_neonat,Maternal and neonatal disorders,_comm,"Communicable, maternal, neonatal, and nutritional diseases"
+maternal_sepsis,Maternal sepsis and other maternal infections,yes,4,Maternal sepsis and other maternal infections,"",fam_maternal,Maternal disorders,mater_neonat,Maternal and neonatal disorders,_comm,"Communicable, maternal, neonatal, and nutritional diseases"
+mental_NEC,"Mental disorders, not elsewhere classified","","","","",fam_mental,Mental disorders,_mental,Mental disorders,_ncd,Non-communicable diseases
+mental_adhd,Attention-deficit/hyperactivity disorder,yes,3,Attention-deficit/hyperactivity disorder,"",fam_mental,Mental disorders,_mental,Mental disorders,_ncd,Non-communicable diseases
+mental_anxiety,Anxiety disorders,yes,3,Anxiety disorders,"",fam_mental,Mental disorders,_mental,Mental disorders,_ncd,Non-communicable diseases
+mental_bipolar,Bipolar disorder,yes,3,Bipolar disorder,"",fam_mental,Mental disorders,_mental,Mental disorders,_ncd,Non-communicable diseases
+mental_conduct,Conduct disorder,yes,3,Conduct disorder,"",fam_mental,Mental disorders,_mental,Mental disorders,_ncd,Non-communicable diseases
+mental_eating,Eating disorders,yes,3,Eating disorders,"",fam_mental,Mental disorders,_mental,Mental disorders,_ncd,Non-communicable diseases
+mental_id,Idiopathic developmental intellectual disability,yes,3,Idiopathic developmental intellectual disability,"",fam_mental,Mental disorders,_mental,Mental disorders,_ncd,Non-communicable diseases
+mental_other,Other mental disorders,yes,3,Other mental disorders,"",fam_mental,Mental disorders,_mental,Mental disorders,_ncd,Non-communicable diseases
+mental_pdd,Autism spectrum disorders,yes,3,Autism spectrum disorders,"",fam_mental,Mental disorders,_mental,Mental disorders,_ncd,Non-communicable diseases
+mental_schizo,Schizophrenia,yes,3,Schizophrenia,"",fam_mental,Mental disorders,_mental,Mental disorders,_ncd,Non-communicable diseases
+mental_unipolar,Depressive disorders,yes,3,Depressive disorders,"",fam_mental,Mental disorders,_mental,Mental disorders,_ncd,Non-communicable diseases
+msk_NEC,"Musculoskeletal disorders, not elsewhere classified","","","","",fam_msk,Musculoskeletal disorders,msk,Musculoskeletal disorders,_ncd,Non-communicable diseases
+msk_gout,Gout,yes,3,Gout,"",fam_msk,Musculoskeletal disorders,msk,Musculoskeletal disorders,_ncd,Non-communicable diseases
+msk_osteoarthritis,Osteoarthritis,yes,3,Osteoarthritis,"",fam_msk,Musculoskeletal disorders,msk,Musculoskeletal disorders,_ncd,Non-communicable diseases
+msk_other,Other musculoskeletal disorders,yes,3,Other musculoskeletal disorders,"",fam_msk,Musculoskeletal disorders,msk,Musculoskeletal disorders,_ncd,Non-communicable diseases
+msk_pain_lowback,Low back pain,yes,3,Low back pain,"",fam_msk,Musculoskeletal disorders,msk,Musculoskeletal disorders,_ncd,Non-communicable diseases
+msk_pain_neck,Neck pain,yes,3,Neck pain,"",fam_msk,Musculoskeletal disorders,msk,Musculoskeletal disorders,_ncd,Non-communicable diseases
+msk_rheumarthritis,Rheumatoid arthritis,yes,3,Rheumatoid arthritis,"",fam_msk,Musculoskeletal disorders,msk,Musculoskeletal disorders,_ncd,Non-communicable diseases
+neo_NEC,"Neoplasms, not elsewhere classified","","","","",fam_neo,Neoplasms,_neo,Neoplasms,_ncd,Non-communicable diseases
+neo_bladder,Bladder cancer,yes,3,Bladder cancer,"",fam_neo,Neoplasms,_neo,Neoplasms,_ncd,Non-communicable diseases
+neo_bone,Malignant neoplasm of bone and articular cartilage,yes,3,Malignant neoplasm of bone and articular cartilage,"",fam_neo,Neoplasms,_neo,Neoplasms,_ncd,Non-communicable diseases
+neo_brain,Brain and central nervous system cancer,yes,3,Brain and central nervous system cancer,"",fam_neo,Neoplasms,_neo,Neoplasms,_ncd,Non-communicable diseases
+neo_breast,Breast cancer,yes,3,Breast cancer,"",fam_neo,Neoplasms,_neo,Neoplasms,_ncd,Non-communicable diseases
+neo_cervical,Cervical cancer,yes,3,Cervical cancer,"",fam_neo,Neoplasms,_neo,Neoplasms,_ncd,Non-communicable diseases
+neo_colorectal,Colon and rectum cancer,yes,3,Colon and rectum cancer,"",fam_neo,Neoplasms,_neo,Neoplasms,_ncd,Non-communicable diseases
+neo_esophageal,Esophageal cancer,yes,3,Esophageal cancer,"",fam_neo,Neoplasms,_neo,Neoplasms,_ncd,Non-communicable diseases
+neo_eye,Eye cancer,yes,3,Eye cancer,"",fam_neo,Neoplasms,_neo,Neoplasms,_ncd,Non-communicable diseases
+neo_gallbladder,Gallbladder and biliary tract cancer,yes,3,Gallbladder and biliary tract cancer,"",fam_neo,Neoplasms,_neo,Neoplasms,_ncd,Non-communicable diseases
+neo_hodgkins,Hodgkin lymphoma,yes,3,Hodgkin lymphoma,"",fam_neo,Neoplasms,_neo,Neoplasms,_ncd,Non-communicable diseases
+neo_kidney,Kidney cancer,yes,3,Kidney cancer,"",fam_neo,Neoplasms,_neo,Neoplasms,_ncd,Non-communicable diseases
+neo_larynx,Larynx cancer,yes,3,Larynx cancer,"",fam_neo,Neoplasms,_neo,Neoplasms,_ncd,Non-communicable diseases
+neo_leukemia,Leukemia,yes,3,Leukemia,"",fam_neo,Neoplasms,_neo,Neoplasms,_ncd,Non-communicable diseases
+neo_liver,Liver cancer,yes,3,Liver cancer,"",fam_neo,Neoplasms,_neo,Neoplasms,_ncd,Non-communicable diseases
+neo_lung,"Tracheal, bronchus, and lung cancer",yes,3,"Tracheal, bronchus, and lung cancer","",fam_neo,Neoplasms,_neo,Neoplasms,_ncd,Non-communicable diseases
+neo_lymphoma,Non-Hodgkin lymphoma,yes,3,Non-Hodgkin lymphoma,"",fam_neo,Neoplasms,_neo,Neoplasms,_ncd,Non-communicable diseases
+neo_melanoma,Malignant skin melanoma,yes,3,Malignant skin melanoma,"",fam_neo,Neoplasms,_neo,Neoplasms,_ncd,Non-communicable diseases
+neo_meso,Mesothelioma,yes,3,Mesothelioma,"",fam_neo,Neoplasms,_neo,Neoplasms,_ncd,Non-communicable diseases
+neo_mouth,Lip and oral cavity cancer,yes,3,Lip and oral cavity cancer,"",fam_neo,Neoplasms,_neo,Neoplasms,_ncd,Non-communicable diseases
+neo_myeloma,Multiple myeloma,yes,3,Multiple myeloma,"",fam_neo,Neoplasms,_neo,Neoplasms,_ncd,Non-communicable diseases
+neo_nasopharynx,Nasopharynx cancer,yes,3,Nasopharynx cancer,"",fam_neo,Neoplasms,_neo,Neoplasms,_ncd,Non-communicable diseases
+neo_neuro,Neuroblastoma and other peripheral nervous cell tumors,yes,3,Neuroblastoma and other peripheral nervous cell tumors,"",fam_neo,Neoplasms,_neo,Neoplasms,_ncd,Non-communicable diseases
+neo_nmsc,Non-melanoma skin cancer,yes,3,Non-melanoma skin cancer,"",fam_neo,Neoplasms,_neo,Neoplasms,_ncd,Non-communicable diseases
+neo_other_benign,Other neoplasms,yes,3,Other neoplasms,"",fam_neo,Neoplasms,_neo,Neoplasms,_ncd,Non-communicable diseases
+neo_other_cancer,Other malignant neoplasms,yes,3,Other malignant neoplasms,"",fam_neo,Neoplasms,_neo,Neoplasms,_ncd,Non-communicable diseases
+neo_otherpharynx,Other pharynx cancer,yes,3,Other pharynx cancer,"",fam_neo,Neoplasms,_neo,Neoplasms,_ncd,Non-communicable diseases
+neo_ovarian,Ovarian cancer,yes,3,Ovarian cancer,"",fam_neo,Neoplasms,_neo,Neoplasms,_ncd,Non-communicable diseases
+neo_pancreas,Pancreatic cancer,yes,3,Pancreatic cancer,"",fam_neo,Neoplasms,_neo,Neoplasms,_ncd,Non-communicable diseases
+neo_prostate,Prostate cancer,yes,3,Prostate cancer,"",fam_neo,Neoplasms,_neo,Neoplasms,_ncd,Non-communicable diseases
+neo_stomach,Stomach cancer,yes,3,Stomach cancer,"",fam_neo,Neoplasms,_neo,Neoplasms,_ncd,Non-communicable diseases
+neo_testicular,Testicular cancer,yes,3,Testicular cancer,"",fam_neo,Neoplasms,_neo,Neoplasms,_ncd,Non-communicable diseases
+neo_thyroid,Thyroid cancer,yes,3,Thyroid cancer,"",fam_neo,Neoplasms,_neo,Neoplasms,_ncd,Non-communicable diseases
+neo_tissue_sarcoma,Soft tissue and other extraosseous sarcomas,yes,3,Soft tissue and other extraosseous sarcomas,"",fam_neo,Neoplasms,_neo,Neoplasms,_ncd,Non-communicable diseases
+neo_uterine,Uterine cancer,yes,3,Uterine cancer,"",fam_neo,Neoplasms,_neo,Neoplasms,_ncd,Non-communicable diseases
+neonatal_NEC,"Neonatal disorders, not elsewhere classified","","","","",fam_neonatal,Neonatal disorders,mater_neonat,Maternal and neonatal disorders,_comm,"Communicable, maternal, neonatal, and nutritional diseases"
+neonatal_enceph,Neonatal encephalopathy due to birth asphyxia and trauma,yes,4,Neonatal encephalopathy due to birth asphyxia and trauma,"",fam_neonatal,Neonatal disorders,mater_neonat,Maternal and neonatal disorders,_comm,"Communicable, maternal, neonatal, and nutritional diseases"
+neonatal_hemolytic,Hemolytic disease and other neonatal jaundice,yes,4,Hemolytic disease and other neonatal jaundice,"",fam_neonatal,Neonatal disorders,mater_neonat,Maternal and neonatal disorders,_comm,"Communicable, maternal, neonatal, and nutritional diseases"
+neonatal_other,Other neonatal disorders,yes,4,Other neonatal disorders,"",fam_neonatal,Neonatal disorders,mater_neonat,Maternal and neonatal disorders,_comm,"Communicable, maternal, neonatal, and nutritional diseases"
+neonatal_preterm,Neonatal preterm birth,yes,4,Neonatal preterm birth,"",fam_neonatal,Neonatal disorders,mater_neonat,Maternal and neonatal disorders,_comm,"Communicable, maternal, neonatal, and nutritional diseases"
+neonatal_sepsis,Neonatal sepsis and other neonatal infections,yes,4,Neonatal sepsis and other neonatal infections,"",fam_neonatal,Neonatal disorders,mater_neonat,Maternal and neonatal disorders,_comm,"Communicable, maternal, neonatal, and nutritional diseases"
+neuro_NEC,"Neurological disorders, not elsewhere classified","","","","",fam_neuro,Neurological disorders,_neuro,Neurological disorders,_ncd,Non-communicable diseases
+neuro_dementia,Alzheimer's disease and other dementias,yes,3,Alzheimer's disease and other dementias,"",fam_neuro,Neurological disorders,_neuro,Neurological disorders,_ncd,Non-communicable diseases
+neuro_epilepsy,Idiopathic epilepsy,yes,3,Idiopathic epilepsy,"",fam_neuro,Neurological disorders,_neuro,Neurological disorders,_ncd,Non-communicable diseases
+neuro_headach,Headache disorders,yes,3,Headache disorders,"",fam_neuro,Neurological disorders,_neuro,Neurological disorders,_ncd,Non-communicable diseases
+neuro_ms,Multiple sclerosis,yes,3,Multiple sclerosis,"",fam_neuro,Neurological disorders,_neuro,Neurological disorders,_ncd,Non-communicable diseases
+neuro_neurone,Motor neuron disease,yes,3,Motor neuron disease,"",fam_neuro,Neurological disorders,_neuro,Neurological disorders,_ncd,Non-communicable diseases
+neuro_other,Other neurological disorders,yes,3,Other neurological disorders,"",fam_neuro,Neurological disorders,_neuro,Neurological disorders,_ncd,Non-communicable diseases
+neuro_parkinsons,Parkinson's disease,yes,3,Parkinson's disease,"",fam_neuro,Neurological disorders,_neuro,Neurological disorders,_ncd,Non-communicable diseases
+_ntd,Neglected tropical diseases and malaria,yes,2,Neglected tropical diseases and malaria,"",fam_ntd,Neglected tropical diseases and malaria,_ntd,Neglected tropical diseases and malaria,_comm,"Communicable, maternal, neonatal, and nutritional diseases"
+nutrition,Nutritional deficiencies,yes,2,Nutritional deficiencies,"",fam_nutrition,Nutritional deficiencies,nutrition,Nutritional deficiencies,_comm,"Communicable, maternal, neonatal, and nutritional diseases"
+_oral,Oral disorders,yes,3,Oral disorders,"",fam_oral,Oral disorders,_otherncd,Other non-communicable diseases,_ncd,Non-communicable diseases
+exp_well_dental,Well dental,no,"","","",fam_oral,Oral disorders,_well,Well care,_well,Well care
+resp_NEC,"Chronic respiratory diseases, not elsewhere classified","","","","",fam_resp,Chronic respiratory diseases,resp,Chronic respiratory diseases,_ncd,Non-communicable diseases
+resp_asthma,Asthma,yes,3,Asthma,"",fam_resp,Chronic respiratory diseases,resp,Chronic respiratory diseases,_ncd,Non-communicable diseases
+resp_copd,Chronic obstructive pulmonary disease,yes,3,Chronic obstructive pulmonary disease,"",fam_resp,Chronic respiratory diseases,resp,Chronic respiratory diseases,_ncd,Non-communicable diseases
+resp_interstitial,Interstitial lung disease and pulmonary sarcoidosis,yes,3,Interstitial lung disease and pulmonary sarcoidosis,"",fam_resp,Chronic respiratory diseases,resp,Chronic respiratory diseases,_ncd,Non-communicable diseases
+resp_other,Other chronic respiratory diseases,yes,3,Other chronic respiratory diseases,"",fam_resp,Chronic respiratory diseases,resp,Chronic respiratory diseases,_ncd,Non-communicable diseases
+resp_pneum,Pneumoconiosis,yes,3,Pneumoconiosis,"",fam_resp,Chronic respiratory diseases,resp,Chronic respiratory diseases,_ncd,Non-communicable diseases
+rf_hyperlipidemia,Treatment of hyperlipidemia,no,"","","",fam_rf,Risk factors,_rf,Risk factors,_rf,Risk factors
+rf_hypertension,Treatment of hypertension,no,"","","",fam_rf,Risk factors,_rf,Risk factors,_rf,Risk factors
+rf_obesity,Treatment of obesity,no,"","","",fam_rf,Risk factors,_rf,Risk factors,_rf,Risk factors
+rf_tobacco,Tobacco intervention,no,"","","",fam_rf,Risk factors,_rf,Risk factors,_rf,Risk factors
+lri,Lower respiratory infections,yes,3,Lower respiratory infections,"",fam_ri,Respiratory infections and tuberculosis,_ri,Respiratory infections and tuberculosis,_comm,"Communicable, maternal, neonatal, and nutritional diseases"
+otitis,Otitis media,yes,3,Otitis media,"",fam_ri,Respiratory infections and tuberculosis,_ri,Respiratory infections and tuberculosis,_comm,"Communicable, maternal, neonatal, and nutritional diseases"
+ri_NEC,"Respiratory infections and tuberculosis, not elsewhere classified","","","","",fam_ri,Respiratory infections and tuberculosis,_ri,Respiratory infections and tuberculosis,_comm,"Communicable, maternal, neonatal, and nutritional diseases"
+tb,Tuberculosis,yes,3,Tuberculosis,"",fam_ri,Respiratory infections and tuberculosis,_ri,Respiratory infections and tuberculosis,_comm,"Communicable, maternal, neonatal, and nutritional diseases"
+uri,Upper respiratory infections,yes,3,Upper respiratory infections,"",fam_ri,Respiratory infections and tuberculosis,_ri,Respiratory infections and tuberculosis,_comm,"Communicable, maternal, neonatal, and nutritional diseases"
+sense_NEC,"Sense organ diseases, not elsewhere classified","","","","",fam_sense,Sense organ diseases,_sense,Sense organ diseases,_ncd,Non-communicable diseases
+sense_hearing,Age-related and other hearing loss,yes,3,Age-related and other hearing loss,"",fam_sense,Sense organ diseases,_sense,Sense organ diseases,_ncd,Non-communicable diseases
+sense_other,Other sense organ diseases,yes,3,Other sense organ diseases,"",fam_sense,Sense organ diseases,_sense,Sense organ diseases,_ncd,Non-communicable diseases
+sense_visionlos,Blindness and vision loss,yes,3,Blindness and vision loss,"",fam_sense,Sense organ diseases,_sense,Sense organ diseases,_ncd,Non-communicable diseases
+skin,Skin and subcutaneous diseases,yes,2,Skin and subcutaneous diseases,"",fam_skin,Skin and subcutaneous diseases,skin,Skin and subcutaneous diseases,_ncd,Non-communicable diseases
+hiv,HIV/AIDS,yes,3,HIV/AIDS,"",fam_std,HIV/AIDS and sexually transmitted infections,_hiv_std,HIV/AIDS and sexually transmitted infections,_comm,"Communicable, maternal, neonatal, and nutritional diseases"
+std,Sexually transmitted infections excluding HIV,yes,3,Sexually transmitted infections excluding HIV,"",fam_std,HIV/AIDS and sexually transmitted infections,_hiv_std,HIV/AIDS and sexually transmitted infections,_comm,"Communicable, maternal, neonatal, and nutritional diseases"
+std_NEC,"HIV/AIDS and sexually transmitted infections, not elsewhere classified","","","","",fam_std,HIV/AIDS and sexually transmitted infections,_hiv_std,HIV/AIDS and sexually transmitted infections,_comm,"Communicable, maternal, neonatal, and nutritional diseases"
+mental_alcohol,Alcohol use disorders,yes,3,Alcohol use disorders,"",fam_subs,Substance use disorders,_subs,Substance use disorders,_ncd,Non-communicable diseases
+mental_drug_agg,Other substance use disorders,yes (indirect),4,"","mental_drug_amphet, mental_drug_cannabis, mental_drug_cocaine, mental_drug_other",fam_subs,Substance use disorders,_subs,Substance use disorders,_ncd,Non-communicable diseases
+mental_drug_opioids,Opioid use disorders,yes,4,Opioid use disorders,"",fam_subs,Substance use disorders,_subs,Substance use disorders,_ncd,Non-communicable diseases
+subs_NEC,"Substance use disorders, not elsewhere classified","","","","",fam_subs,Substance use disorders,_subs,Substance use disorders,_ncd,Non-communicable diseases
+urinary,Urinary diseases and male infertility,yes,3,Urinary diseases and male infertility,"",fam_urinary,Urinary diseases and male infertility,_otherncd,Other non-communicable diseases,_ncd,Non-communicable diseases
+exp_donor,Donor,no,"","","",fam_well,Well causes,_well,Well care,_well,Well care
+exp_family_planning,Family planning,no,"","","",fam_well,Well causes,_well,Well care,_well,Well care
+exp_social_services,Social services,no,"","","",fam_well,Well causes,_well,Well care,_well,Well care
+exp_well_person,Well person,no,"","","",fam_well,Well causes,_well,Well care,_well,Well care

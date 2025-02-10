@@ -1,0 +1,387 @@
+title = "DEX US County Pipeline Config"
+
+## -----
+## The general purpose of the config is to avoid hard-coding in code 
+## and store key metadata for data sources and pipeline steps
+## ----- 
+## The steps are ordered here in roughly the same order as they become relevant in code
+## -----
+## Throughout the R and python code in this repo, two functions are used to read in and parse this config file:
+## 
+##  > `get_config()` finds this file and reads it in to the code
+## 
+##  > `parsed_config()` does 2 things:
+##     1. Replaces any "run_#" or "map_version_id_#" with the actual version IDs being called in a given script
+##     2. Evaluates any strings with a leading-period as internal references to other config values with the same "key"
+##        e.g. looking at the [CAUSEMAP.data_input_dir] section... `MDCR = ".FORMAT.data_output_dir"` will be 
+##        replaced with value of `FORMAT.data_output_dir` with key = "MDCR" (in this case, `MDCR = "FILEPATH"`)
+##        (because a data_output_dir from one step is often the data_input_dir from another step, 
+##         this function eliminates the need to transcribe the same path twice in this config file)
+## 
+## These functions are not included in the current repo
+## ------
+
+[FORMAT] ## Corresponds to code in: {repo_root}/00_data_prep
+    targets = ["MDCR", "MDCD", "MSCAN", "KYTHERA", "NIS", "NEDS", "SIDS", "SEDD", "CHIA_MDCR", "MEPS", "HCCI"]
+    [FORMAT.stage_1_dir] 
+        MDCR = "FILEPATH"
+        MDCD = "FILEPATH"
+        MSCAN = "FILEPATH"
+        KYTHERA = "FILEPATH"
+        NIS = "FILEPATH" 
+        NEDS = "FILEPATH"
+        SIDS = "FILEPATH"
+        SEDD = "FILEPATH"
+        CHIA_MDCR = "FILEPATH"
+        MEPS = "FILEPATH" 
+        HCCI = "FILEPATH"
+    [FORMAT.stage_2_dir] 
+        MDCR = "FILEPATH"
+        MDCD = "FILEPATH"
+        MSCAN = "FILEPATH"
+        KYTHERA = "FILEPATH"
+        NIS = "FILEPATH" 
+        NEDS = "FILEPATH"
+        SIDS = "FILEPATH"
+        SEDD = "FILEPATH"
+        CHIA_MDCR = "FILEPATH"
+        MEPS = "FILEPATH" 
+        HCCI = "FILEPATH"
+    [FORMAT.data_output_dir] 
+        MDCR = "FILEPATH"
+        MDCD = "FILEPATH"
+        MSCAN = "FILEPATH"
+        KYTHERA = "FILEPATH"
+        NIS = "FILEPATH" 
+        NEDS = "FILEPATH"
+        SIDS = "FILEPATH"
+        SEDD = "FILEPATH"
+        CHIA_MDCR = "FILEPATH"
+        MEPS = "FILEPATH" 
+        HCCI = "FILEPATH"
+
+[CAUSEMAP] ## Corresponds to code in: {repo_root}/01_pipeline/CAUSEMAP
+    targets = ["MDCR", "MDCD", "MSCAN", "KYTHERA", "NIS", "NEDS", "SIDS", "SEDD", "CHIA_MDCR", "HCCI"]
+    causelist_path = "{repo_root}/static_files/CAUSEMAP/causelist.csv"
+    icd_map_path = "{repo_root}/static_files/CAUSEMAP/map_version_120/icd_map.csv"
+    injury_code_path = "{repo_root}/static_files/CAUSEMAP/map_version_120/injury_code_list.csv"
+    rx_map_dir = "FILEPATH"
+    [CAUSEMAP.sub_dataset] 
+        MDCR = ["carrier", "carrier_part_c", "hha", "hha_part_c", "hop", "hop_part_c", "hosp", "ip", "ip_part_c", "nf", "nf_medpar", "nf_part_c", "rx", "rx_part_c", "dv_carrier", "dv_hop", "dv_hop_c", "dv_carrier_c"]
+        MDCD = ["ip", "ot", "ip_taf", "nf_taf", "ot_taf", "rx_taf", "dv_taf", "dv_max"]
+        MSCAN = ["main", "rx"]
+        KYTHERA = ["main", "rx"]
+        CHIA_MDCR = ["carrier", "hha", "hop", "hosp", "ip", "nf", "dv_carrier", "dv_hop"]
+    [CAUSEMAP.data_input_dir] 
+        MDCR = ".FORMAT.data_output_dir"
+        MDCD = ".FORMAT.data_output_dir"
+        MSCAN = ".FORMAT.data_output_dir"
+        KYTHERA = ".FORMAT.data_output_dir"
+        NIS = ".FORMAT.data_output_dir"
+        NEDS = ".FORMAT.data_output_dir"
+        SIDS = ".FORMAT.data_output_dir"
+        SEDD = ".FORMAT.data_output_dir"
+        CHIA_MDCR = ".FORMAT.data_output_dir"
+        HCCI = ".FORMAT.data_output_dir"
+    [CAUSEMAP.data_output_dir] 
+        MDCR = "FILEPATH/run_#/CAUSEMAP/"
+        MDCD = "FILEPATH/run_#/CAUSEMAP/"
+        MSCAN = "FILEPATH/run_#/CAUSEMAP/"
+        KYTHERA = "FILEPATH/run_#/CAUSEMAP/"
+        NIS = "FILEPATH/run_#/CAUSEMAP/" 
+        NEDS = "FILEPATH/run_#/CAUSEMAP/" 
+        SIDS = "FILEPATH/run_#/CAUSEMAP/" 
+        SEDD = "FILEPATH/run_#/CAUSEMAP/" 
+        CHIA_MDCR = "FILEPATH/run_#/CAUSEMAP/"
+        HCCI = "FILEPATH/run_#/CAUSEMAP/"
+
+[ZIPFIX] ## Corresponds to code in: {repo_root}/01_pipeline/ZIPFIX
+    targets = ["KYTHERA"] 
+    zip3_map_path = "{repo_root}/static_files/ZIPFIX/zip3_mcnty_residence_wt.feather" 
+    zip5_map_path = "{repo_root}/static_files/ZXIPFIX/zip5_mcnty_residence_wt.feather"
+    [ZIPFIX.data_input_dir] 
+        KYTHERA = ".CAUSEMAP.data_output_dir"
+    [ZIPFIX.data_output_dir] 
+        KYTHERA = "FILEPATH/run_#/ZIPFIX/"
+
+[C2E] ## Corresponds to code in: {repo_root}/01_pipeline/C2E
+    targets = ["MSCAN", "MDCR", "MDCD", "KYTHERA", "CHIA_MDCR"] 
+    pipeline_dir = "FILEPATH"
+    [C2E.data_input_dir] 
+        MDCR = ".CAUSEMAP.data_output_dir"
+        MDCD = ".CAUSEMAP.data_output_dir"
+        MSCAN = ".CAUSEMAP.data_output_dir"
+        KYTHERA = ".ZIPFIX.data_output_dir"
+        CHIA_MDCR = ".CAUSEMAP.data_output_dir"
+    [C2E.data_output_dir] 
+        MDCR = "FILEPATH/run_#/C2E/"
+        MDCD = "FILEPATH/run_#/C2E/"
+        MSCAN = "FILEPATH/run_#/C2E/"
+        KYTHERA = "FILEPATH/run_#/C2E/"
+        CHIA_MDCR = "FILEPATH/run_#/C2E/"
+
+[PRIMARY_CAUSE] ## Corresponds to code in: {repo_root}/01_pipeline/PRIMARY_CAUSE 
+    targets = ["MDCR", "MDCD", "MSCAN", "KYTHERA", "NIS", "NEDS", "SIDS", "SEDD", "CHIA_MDCR"]
+    [PRIMARY_CAUSE.data_input_dir] 
+        MDCR = ".C2E.data_output_dir"
+        MDCD = ".C2E.data_output_dir"
+        MSCAN = ".C2E.data_output_dir"
+        KYTHERA = ".C2E.data_output_dir"
+        NIS = ".CAUSEMAP.data_output_dir"
+        NEDS = ".CAUSEMAP.data_output_dir"
+        SIDS = ".CAUSEMAP.data_output_dir"
+        SEDD = ".CAUSEMAP.data_output_dir"
+        CHIA_MDCR = ".C2E.data_output_dir"
+    [PRIMARY_CAUSE.data_output_dir] 
+        MDCR = "FILEPATH/run_#/PRIMARY_CAUSE/"
+        MDCD = "FILEPATH/run_#/PRIMARY_CAUSE/"
+        MSCAN = "FILEPATH/run_#/PRIMARY_CAUSE/"
+        KYTHERA = "FILEPATH/run_#/PRIMARY_CAUSE/"
+        NIS = "FILEPATH/run_#/PRIMARY_CAUSE/" 
+        NEDS = "FILEPATH/run_#/PRIMARY_CAUSE/" 
+        SIDS = "FILEPATH/run_#/PRIMARY_CAUSE/" 
+        SEDD = "FILEPATH/run_#/PRIMARY_CAUSE/" 
+        CHIA_MDCR = "FILEPATH/run_#/PRIMARY_CAUSE/"
+
+[INJURY] ## Corresponds to code in: {repo_root}/01_pipeline/INJURY
+  map_inputs = ["NIS", "NEDS", "MSCAN", "KYTHERA", "MDCR", "MDCD"]
+  targets = ["NIS", "NEDS", "SIDS", "SEDD", "MSCAN", "MDCR", "MDCD", "KYTHERA", "CHIA_MDCR"]
+  map_output_dir = "FILEPATH/map_version_#/" 
+  [INJURY.data_input_dir] 
+        MDCR = ".PRIMARY_CAUSE.data_output_dir"
+        MDCD = ".PRIMARY_CAUSE.data_output_dir"
+        MSCAN = ".PRIMARY_CAUSE.data_output_dir"
+        KYTHERA = ".PRIMARY_CAUSE.data_output_dir"
+        NIS = ".PRIMARY_CAUSE.data_output_dir"
+        NEDS = ".PRIMARY_CAUSE.data_output_dir"
+        SIDS = ".PRIMARY_CAUSE.data_output_dir"
+        SEDD = ".PRIMARY_CAUSE.data_output_dir"
+        CHIA_MDCR = ".PRIMARY_CAUSE.data_output_dir"
+  [INJURY.data_output_dir]
+        MDCR = "FILEPATH/run_#/INJURY/"
+        MDCD = "FILEPATH/run_#/INJURY/"
+        MSCAN = "FILEPATH/run_#/INJURY/"
+        KYTHERA = "FILEPATH/run_#/INJURY/"
+        NIS = "FILEPATH/run_#/INJURY/" 
+        NEDS = "FILEPATH/run_#/INJURY/" 
+        SIDS = "FILEPATH/run_#/INJURY/" 
+        SEDD = "FILEPATH/run_#/INJURY/" 
+        CHIA_MDCR = "FILEPATH/run_#/INJURY/"
+
+[RDP] ## Corresponds to code in: {repo_root}/01_pipeline/RDP 
+    map_inputs = ["NIS", "NEDS", "SIDS", "SEDD", "MSCAN",  "KYTHERA", "CHIA_MDCR", "MDCR", "MDCD"]
+    map_output_dir = "FILEPATH/map_version_#/"
+    targets = ["NIS", "NEDS", "SIDS", "SEDD", "MSCAN", "MDCR", "MDCD", "KYTHERA", "CHIA_MDCR"]
+    package_dir = "FILEPATH/map_version_#/"
+    package_helper_dir = "FILEPATH"  
+    cod_input_package_dir = "FILEPATH"
+    [RDP.data_input_dir] 
+        MDCR = ".INJURY.data_output_dir"
+        MDCD = ".INJURY.data_output_dir"
+        MSCAN = ".INJURY.data_output_dir"
+        KYTHERA = ".INJURY.data_output_dir"
+        NIS = ".INJURY.data_output_dir"
+        NEDS = ".INJURY.data_output_dir"
+        SIDS = ".INJURY.data_output_dir"
+        SEDD = ".INJURY.data_output_dir"
+        CHIA_MDCR = ".INJURY.data_output_dir"
+        HCCI = ".CAUSEMAP.data_output_dir"
+    [RDP.data_output_dir] 
+        MDCR = "FILEPATH/run_#/RDP/"
+        MDCD = "FILEPATH/run_#/RDP/"
+        MSCAN = "FILEPATH/run_#/RDP/"
+        KYTHERA = "FILEPATH/run_#/RDP/"
+        NIS = "FILEPATH/run_#/RDP/" 
+        NEDS = "FILEPATH/run_#/RDP/" 
+        SIDS = "FILEPATH/run_#/RDP/" 
+        SEDD = "FILEPATH/run_#/RDP/" 
+        CHIA_MDCR = "FILEPATH/run_#/RDP/"
+        HCCI = "FILEPATH/run_#/RDP/"
+
+[DETRUNC] ## Corresponds to code in: {repo_root}/01_pipeline/DETRUNC 
+    targets = ["MEPS"] 
+    map_inputs = ["MSCAN", "MDCR", "MDCD"] 
+    map_output_dir = "FILEPATH/map_version_#/" 
+    sub_dataset = ["ED", "HH", "IP", "OB", "OP", "RX", "DV"]
+    [DETRUNC.data_input_dir] 
+        MDCR = ".RDP.data_output_dir"
+        MDCD = ".RDP.data_output_dir"
+        MSCAN = ".RDP.data_output_dir"
+        CHIA_MDCR = ".RDP.data_output_dir"
+        MEPS = ".FORMAT.data_output_dir"
+    [DETRUNC.data_output_dir]
+        MEPS = "FILEPATH/run_#/DETRUNC/"
+
+[F2T] ## Corresponds to code in: {repo_root}/01_pipeline/F2T_C2P
+    map_inputs = ["MEPS", "MSCAN", "MDCR", "MDCD", "CHIA_MDCR"]
+    map_output_dir = "FILEPATH/map_version_#/" 
+    targets = ["NIS", "NEDS", "SIDS", "SEDD","MDCR","HCCI"]  
+    [F2T.data_input_dir] 
+        MDCR = ".RDP.data_output_dir"
+        MDCD = ".RDP.data_output_dir"
+        MSCAN = ".RDP.data_output_dir"
+        NIS = ".RDP.data_output_dir"
+        NEDS = ".RDP.data_output_dir"
+        SIDS = ".RDP.data_output_dir"
+        SEDD = ".RDP.data_output_dir"
+        CHIA_MDCR = ".RDP.data_output_dir"
+        MEPS = ".DETRUNC.data_output_dir"
+        HCCI = ".RDP.data_output_dir"
+    [F2T.data_output_dir] 
+        MDCR = "FILEPATH/run_#/F2T/"
+        NIS = "FILEPATH/run_#/F2T/" 
+        NEDS = "FILEPATH/run_#/F2T/" 
+        SIDS = "FILEPATH/run_#/F2T/" 
+        SEDD = "FILEPATH/run_#/F2T/" 
+        HCCI = "FILEPATH/run_#/F2T/"
+
+[C2P] ## Corresponds to code in: {repo_root}/01_pipeline/F2T_C2P
+    map_inputs = ["MEPS", "MDCR", "MDCD", "KYTHERA", "CHIA_MDCR"]
+    map_output_dir = "FILEPATH/map_version_#/" 
+    targets = ["NIS", "NEDS", "SIDS", "SEDD"]
+    [C2P.data_input_dir] 
+        MDCR = ".RDP.data_output_dir"
+        MDCD = ".RDP.data_output_dir"
+        MSCAN = ".RDP.data_output_dir"
+        KYTHERA = ".RDP.data_output_dir"
+        NIS = ".F2T.data_output_dir"
+        NEDS = ".F2T.data_output_dir"
+        SIDS = ".F2T.data_output_dir"
+        SEDD = ".F2T.data_output_dir"
+        CHIA_MDCR = ".RDP.data_output_dir"
+        MEPS = ".DETRUNC.data_output_dir"
+        HCCI = ".F2T.data_output_dir"
+    [C2P.data_output_dir] 
+        NIS = "FILEPATH/run_#/C2P/" 
+        NEDS = "FILEPATH/run_#/C2P/" 
+        SIDS = "FILEPATH/run_#/C2P/" 
+        SEDD = "FILEPATH/run_#/C2P/" 
+
+[PRIV_UTIL] ## Corresponds to code in: {repo_root}/01_pipeline/PRIV_UTIL 
+    targets = ["MSCAN", "KYTHERA", "NIS", "NEDS", "SIDS", "SEDD"]
+    [PRIV_UTIL.data_input_dir]
+        MSCAN = ".PRIMARY_CAUSE.data_output_dir" 
+        KYTHERA = ".PRIMARY_CAUSE.data_output_dir" 
+        NIS = ".PRIMARY_CAUSE.data_output_dir" 
+        NEDS = ".PRIMARY_CAUSE.data_output_dir" 
+        SIDS = ".PRIMARY_CAUSE.data_output_dir" 
+        SEDD = ".PRIMARY_CAUSE.data_output_dir" 
+    [PRIV_UTIL.data_input_dir_RX]
+        MSCAN = ".CAUSEMAP.data_output_dir"
+        KYTHERA = ".ZIPFIX.data_output_dir"
+    [PRIV_UTIL.data_output_dir]
+        MSCAN = "FILEPATH/run_#/PRIV_UTIL/"
+        KYTHERA = "FILEPATH/run_#/PRIV_UTIL/"
+        NIS = "FILEPATH/run_#/PRIV_UTIL/" 
+        NEDS = "FILEPATH/run_#/PRIV_UTIL/" 
+        SIDS = "FILEPATH/run_#/PRIV_UTIL/" 
+        SEDD = "FILEPATH/run_#/PRIV_UTIL/"
+        
+[SAMPLE_DENOM] ## Corresponds to code in: {repo_root}/00_data_prep/denom 
+    [SAMPLE_DENOM.data_output_dir]
+        MDCR = "FILEPATH"
+        MDCD = "FILEPATH"
+        MSCAN = "FILEPATH"
+        KYTHERA = "FILEPATH" 
+        NIS = "FILEPATH" 
+        NEDS = "FILEPATH" 
+        SIDS = "FILEPATH" 
+        SEDD = "FILEPATH" 
+        CHIA_MDCR = "FILEPATH" 
+        MEPS = "FILEPATH"
+        POP_DENOM = "FILEPATH" 
+
+[COLLAPSE] ## Corresponds to code in: {repo_root}/01_pipeline/COLLAPSE
+    targets = ["MDCR", "MDCD", "MSCAN", "KYTHERA", "NIS", "NEDS", "SIDS", "SEDD", "CHIA_MDCR", "MEPS", "HCCI"]
+    collapse_output_dir = "FILEPATH" 
+    pipeline_output_dir = "FILEPATH" 
+    [COLLAPSE.data_input_dir] 
+        MDCR = ".F2T.data_output_dir"
+        MDCD = ".RDP.data_output_dir"
+        MSCAN = ".RDP.data_output_dir"
+        KYTHERA = ".RDP.data_output_dir"
+        NIS = ".C2P.data_output_dir"
+        NEDS = ".C2P.data_output_dir"
+        SIDS = ".C2P.data_output_dir"
+        SEDD = ".C2P.data_output_dir"
+        CHIA_MDCR = ".RDP.data_output_dir"
+        MEPS = ".DETRUNC.data_output_dir"
+        HCCI = ".F2T.data_output_dir" 
+    [COLLAPSE.data_input_dir_DV_RX]
+        MDCR = ".CAUSEMAP.data_output_dir"
+        MDCD = ".CAUSEMAP.data_output_dir"
+        MSCAN = ".CAUSEMAP.data_output_dir"
+        KYTHERA = ".ZIPFIX.data_output_dir"
+        CHIA_MDCR = ".CAUSEMAP.data_output_dir"
+        MEPS = ".DETRUNC.data_output_dir"
+        HCCI = ".CAUSEMAP.data_output_dir"
+
+[COMORB] ## Corresponds to code in: {repo_root}/01_pipeline/COMORB
+    map_inputs = ["MSCAN", "MDCR", "MDCD"] 
+    map_output_dir = "FILEPATH/map_version_#/" 
+    targets = ["NIS", "NEDS", "SIDS", "SEDD", "MEPS", "MSCAN", "MDCR", "MDCD", "HCCI", "KYTHERA", "CHIA_MDCR"] 
+    data_input_dir = "FILEPATH"
+    data_output_dir_tmp = "FILEPATH"
+    data_output_dir_final = "FILEPATH"
+    [COMORB.map_data_input_dir]
+        MDCR = ".F2T.data_output_dir"  
+        MDCD = ".RDP.data_output_dir"
+        MSCAN = ".RDP.data_output_dir"
+
+[MODEL] ## Corresponds to code in: {repo_root}/02_modeling
+    input_dir = "FILEPATH/run_#/"
+    output_dir = "FILEPATH/model_version_#/"
+    shiny_dir = "FILEPATH"
+
+[POST_MODEL] ## Corresponds to code in: {repo_root}/03_post_model
+    [POST_MODEL.imputation]
+        post_impute_meta_path = "FILEPATH"
+        input_source_path = "FILEPATH"
+        imputed_dir = "FILEPATH"
+    [POST_MODEL.scaling]
+        pop_denom_dir = "FILEPATH"
+        shea_env_path = "FILEPATH"
+        compile_dir = "FILEPATH" 
+        aggregate_dir = "FILEPATH" 
+        ratio_path = "FILEPATH" 
+        viz_path = "FILEPATH" 
+    [POST_MODEL.final]
+        final_dir = "FILEPATH"
+
+[METADATA]
+    toc_cause_restrictions_PRE_COLLAPSE_path = "{repo_root}/static_files/RESTRICTIONS/toc_cause_age_sex__PRE_COLLAPSE.csv"
+    toc_cause_restrictions_path = "{repo_root}/static_files/RESTRICTIONS/toc_cause_age_sex.csv"
+    toc_metric_restrictions_path = "{repo_root}/static_files/RESTRICTIONS/toc_metric.csv"
+    dataset_payer_restrictions_path = "{repo_root}/static_files/RESTRICTIONS/dataset_pripayer_payer.csv"
+    sids_sedd_restrictions_path = "{repo_root}/static_files/RESTRICTIONS/sids_sedd_state_years.csv"
+    collapse_expected_combos_path = "FILEPATH"
+    population_path = "FILEPATH"
+    thresholds_path = "FILEPATH"
+    [METADATA.tocs]
+        MDCR = ["AM", "ED", "HH", "IP", "NF", "RX", "DV"]
+        MDCD = ["AM", "ED", "HH", "IP", "NF", "RX", "DV"]
+        MSCAN = ["AM", "ED", "HH", "IP", "NF", "RX"]
+        KYTHERA = ["AM", "ED", "HH", "IP", "NF", "RX"]
+        NIS = ["IP"]
+        NEDS = ["ED"]
+        SIDS = ["IP"]
+        SEDD = ["ED"]
+        CHIA_MDCR = ["AM", "ED", "HH", "IP", "NF","DV"]
+        MEPS = ["AM", "ED", "HH", "IP", "RX", "DV"]
+        HCCI = ["AM","ED","HH","IP","RX"] 
+    [METADATA.geos]
+        MDCR = ["national", "state", "county"]
+        MDCD = ["national", "state", "county"]
+        MSCAN = ["national", "state"]
+        KYTHERA = ["national", "state", "county"]
+        NIS = ["national"] 
+        NEDS = ["national"]
+        SIDS = ["state", "county"]
+        SEDD = ["state", "county"]
+        CHIA_MDCR = ["state", "county"]
+        MEPS = ["national"]
+        HCCI = [ "state", "county"]
+    [METADATA.ages]
+        AGES =  [0, 1, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95]
+    [METADATA.states]
+        CURRENT_COUNTIES = "FILEPATH"
