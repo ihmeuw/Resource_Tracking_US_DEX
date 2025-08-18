@@ -5,6 +5,7 @@ This repository contains cleaned code that the Resource Tracking DEX sub-team us
 
 * _Tracking US Health Care Spending by Health Condition and County_, JAMA 2025 [link](https://jamanetwork.com/journals/jama/fullarticle/2830568)
 * _Drivers of Variation in Health Care Spending Across US Counties_, JAMA Health Forum 2025 [link](https://jamanetwork.com/journals/jama-health-forum/fullarticle/2829955)
+* _Evaluating US county health-care system performance and key associated factors (2014–19): a Triple Aim framework analysis_, Lancet Public Health 2025
 
 
 ## Links to IHME and Resource Tracking
